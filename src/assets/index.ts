@@ -1,0 +1,10 @@
+export { default as AILawyerImage } from "./ai-lawyer.png";
+export { default as DubAIImage } from "./dubai.png";
+export { default as OnlineJournalImage } from "./post.jpg";
+export { default as ShapeDrawerImage } from "./ShapeDrawer.png";
+export { default as BusETicketImage } from "./bus.png";
+export { default as WeatherAppImage } from "./weather.png";
+export { default as CancerDetectionImage } from "./cancer.png";
+export { default as SignboardDetectionImage } from "./signboard.png";
+export { default as WatchDogImage } from "./bot.jpg";
+export { default as PickAndPlaceImage } from "./picknplace.jpeg";
