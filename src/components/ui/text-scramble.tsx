@@ -17,7 +17,6 @@ export function TextScramble({
 }: TextScrambleProps) {
   const [displayText, setDisplayText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
-  const frameRef = useRef<number>(0);
   const scrambleRef = useRef<NodeJS.Timeout | null>(null);
 
   // Characters to use for scrambling effect

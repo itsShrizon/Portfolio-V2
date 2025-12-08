@@ -1,9 +1,7 @@
 import { StaticImageData } from "next/image";
 
 import {
-  AILawyerImage,
   DubAIImage,
-  OnlineJournalImage,
   ShapeDrawerImage,
   BusETicketImage,
   WeatherAppImage,

@@ -1,7 +1,6 @@
 "use client";
 
 import { ArrowUpRight, ChevronDown } from "lucide-react";
-import Link from "next/link";
 import { StaticImageData } from "next/image";
 import { useState } from "react";
 import { useSpring, animated } from "@react-spring/web";

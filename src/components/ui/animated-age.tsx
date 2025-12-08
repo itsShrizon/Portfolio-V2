@@ -12,7 +12,7 @@ export function AnimatedAge({ finalAge }: AnimatedAgeProps) {
   const [hasAnimated, setHasAnimated] = useState(false);
   const [isGlitching, setIsGlitching] = useState(false);
 
-  const { number } = useSpring({
+  useSpring({
     from: { number: 100 },
     to: { number: hasAnimated ? finalAge : finalAge - 1 },
     config: { 

@@ -13,6 +13,11 @@ export function CalendlyModal({ open, onClose, url }: CalendlyModalProps) {
   const [embedUrl, setEmbedUrl] = useState<string | null>(null);
   const [shouldHydrate, setShouldHydrate] = useState(false);
 
+  type IdleWindow = Window & {
+    requestIdleCallback?: (cb: IdleRequestCallback, options?: IdleRequestOptions) => number;
+    cancelIdleCallback?: (handle: number) => void;
+  };
+
   // Delay hydration until after page load + idle to avoid impacting initial render
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -44,14 +49,14 @@ export function CalendlyModal({ open, onClose, url }: CalendlyModalProps) {
 
     // Hydrate quickly after mount (150ms) and again on idle if available
     const t = window.setTimeout(hydrate, 150);
-    const idle = (window as any).requestIdleCallback
-      ? (window as any).requestIdleCallback(hydrate, { timeout: 800 })
+    const idle = (window as IdleWindow).requestIdleCallback
+      ? (window as IdleWindow).requestIdleCallback!(hydrate, { timeout: 800 })
       : null;
 
     return () => {
       window.clearTimeout(t);
-      if (idle && (window as any).cancelIdleCallback) {
-        (window as any).cancelIdleCallback(idle);
+      if (idle && (window as IdleWindow).cancelIdleCallback) {
+        (window as IdleWindow).cancelIdleCallback!(idle);
       }
     };
   }, [url]);

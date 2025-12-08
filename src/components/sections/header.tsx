@@ -52,13 +52,13 @@ export function Header({ data }: { data: HeaderData }) {
         </p>
 
         <div>
-          <h1 className="font-bold text-primary text-4xl tracking-tight">
+          <animated.h1 style={nameAnimation} className="font-bold text-primary text-4xl tracking-tight">
             <TextScramble 
               text={data.NAME}
               speed={50}
               scrambleSpeed={30}
             />
-          </h1>
+          </animated.h1>
           <h2 className="flex flex-col gap-0 font-normal text-primary/90 text-base mt-2">
             <p>
               <AnimatedAge finalAge={Number(data.AGE)} />, {data.PRONOUN}
