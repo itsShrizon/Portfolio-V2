@@ -80,8 +80,10 @@ export function Blogs({ data }: { data: Record<string, IBlogData> }) {
         <ul className="flex flex-col gap-12 mt-4 font-normal text-primary/90 text-base">
         {Object.entries(featuredData).map(([key, value]) => (
           <li key={key} className="cursor-target">
-            <div className="pl-4 border-muted-foreground hover:border-primary border-l size-full transition-all duration-300">
-              <div className="flex items-start justify-between gap-2">
+            <div className="group relative p-6 rounded-lg border border-primary/10 bg-gradient-to-br from-muted/30 to-background backdrop-blur-sm overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-[1.01]">
+              <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-500/0 via-purple-500/20 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+              <div className="relative z-10 flex items-start justify-between gap-2">
                 <p className="text-primary/90 text-lg flex-1">
                   {key}{" "}
                   <span className="inline-block bg-secondary max-sm:mb-2 ml-2 px-2 py-1 rounded text-xs">
@@ -94,7 +96,7 @@ export function Blogs({ data }: { data: Record<string, IBlogData> }) {
               </div>
 
               {value.LINK && (
-                <p className="flex items-center gap-1 text-sm mt-1">
+                <p className="relative z-10 flex items-center gap-1 text-sm mt-1">
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
@@ -106,7 +108,7 @@ export function Blogs({ data }: { data: Record<string, IBlogData> }) {
                 </p>
               )}
 
-              <p className={`${value.LINK ? 'mt-1' : 'mt-2'} text-muted-foreground text-sm text-justify`}>
+              <p className={`${value.LINK ? 'mt-1' : 'mt-2'} relative z-10 text-muted-foreground text-sm text-justify`}>
                 {value.DESCRIPTION}
               </p>
 
@@ -115,7 +117,7 @@ export function Blogs({ data }: { data: Record<string, IBlogData> }) {
                 value.TYPE === "skill-track") &&
                 value.COURSES &&
                 value.COURSES.length > 0 && (
-                  <div className="mt-3">
+                  <div className="relative z-10 mt-3">
                     <button
                       onClick={() => toggleExpand(key)}
                       className="flex items-center gap-2 text-sm text-primary/90 hover:text-primary transition-colors font-medium"

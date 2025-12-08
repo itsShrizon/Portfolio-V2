@@ -53,9 +53,11 @@ export function Experience({
         <ul className="flex flex-col gap-12 mt-4 font-normal text-primary/90 text-base">
         {Object.entries(data).map(([key, value]) => (
           <li key={key} className="cursor-target">
-            <div className="pl-4 border-muted-foreground hover:border-primary border-l size-full transition-all duration-300">
+            <div className="group relative p-6 rounded-lg border border-primary/10 bg-gradient-to-br from-muted/30 to-background backdrop-blur-sm overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-[1.01]">
+              <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-500/0 via-purple-500/20 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
               {/* Company Header */}
-              <div className="mb-4">
+              <div className="relative z-10 mb-4">
                 <p className="flex items-center text-base">
                   <a
                     target="_blank"
@@ -69,7 +71,7 @@ export function Experience({
               </div>
 
               {/* Roles */}
-              <div className="space-y-6">
+              <div className="relative z-10 space-y-6">
                 {value.ROLES.map((role, roleIndex) => (
                   <div key={roleIndex}>
                     <div className="flex sm:flex-row flex-col justify-between items-start">
@@ -98,7 +100,7 @@ export function Experience({
                       {role.TECH_STACK.map((tech, index) => (
                         <li
                           key={index}
-                          className="bg-muted px-2 py-1 rounded text-xs"
+                          className="bg-muted/60 border border-primary/10 px-2 py-1 rounded text-xs"
                         >
                           {tech}
                         </li>

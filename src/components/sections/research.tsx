@@ -55,8 +55,10 @@ export function Research({ data }: { data: Record<string, IResearchData> }) {
         <ul className="flex flex-col gap-12 mt-4 font-normal text-primary/90 text-base">
         {Object.entries(data).map(([key, value]) => (
           <li key={key} className="cursor-target">
-            <div className="pl-4 border-muted-foreground hover:border-primary border-l size-full transition-all duration-300">
-              <p className="text-primary/90 text-lg">
+            <div className="group relative p-6 rounded-lg border border-primary/10 bg-gradient-to-br from-muted/30 to-background backdrop-blur-sm overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-[1.01]">
+              <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-500/0 via-purple-500/20 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+              <p className="relative z-10 text-primary/90 text-lg">
                 {key}{" "}
                 <span
                   className={`inline-block max-sm:mb-2 ml-2 px-2 py-1 rounded text-xs ${getStatusColor(
@@ -68,7 +70,7 @@ export function Research({ data }: { data: Record<string, IResearchData> }) {
               </p>
 
               {value.COLLABORATORS.length > 0 && (
-                <div className="flex flex-wrap items-center gap-2 mt-1">
+                <div className="relative z-10 flex flex-wrap items-center gap-2 mt-1">
                   <span className="text-muted-foreground text-sm">
                     Collaborators: {value.COLLABORATORS.join(", ")}
                   </span>
@@ -76,7 +78,7 @@ export function Research({ data }: { data: Record<string, IResearchData> }) {
               )}
 
               {value.LINK && (
-                <p className="flex items-center gap-1 mt-1 text-sm">
+                <p className="relative z-10 flex items-center gap-1 mt-1 text-sm">
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
@@ -88,7 +90,7 @@ export function Research({ data }: { data: Record<string, IResearchData> }) {
                 </p>
               )}
 
-              <p className="mt-2 text-muted-foreground text-sm text-justify">
+              <p className="relative z-10 mt-2 text-muted-foreground text-sm text-justify">
                 {value.DESCRIPTION}
               </p>
             </div>

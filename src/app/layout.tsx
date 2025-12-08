@@ -136,6 +136,25 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${outfit.variable} overflow-x-hidden`} suppressHydrationWarning >
       <head>
+        <meta name="theme-color" content="#0b1021" media="(prefers-color-scheme: dark)" />
+        <meta name="theme-color" content="#f9fafb" media="(prefers-color-scheme: light)" />
+        <meta name="application-name" content="Tanzir Hossain" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: 'Tanzir Hossain | AI Engineer',
+              url: 'https://tanzir-hossain.vercel.app',
+              potentialAction: {
+                '@type': 'SearchAction',
+                target: 'https://www.google.com/search?q={search_term_string}',
+                'query-input': 'required name=search_term_string',
+              },
+            }),
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

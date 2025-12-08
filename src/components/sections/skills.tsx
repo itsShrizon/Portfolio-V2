@@ -36,8 +36,9 @@ export function Skills({ data }: { data: Record<string, string[]> }) {
           {Object.entries(data).map(([key, value]) => (
             <li
               key={key}
-              className="w-full grid items-start gap-x-6 gap-y-2 sm:grid-cols-[200px_1fr]"
+              className="w-full grid items-start gap-x-6 gap-y-2 sm:grid-cols-[200px_1fr] relative p-6 rounded-lg border border-primary/10 bg-gradient-to-br from-muted/30 to-background backdrop-blur-sm overflow-hidden group shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-[1.01]"
             >
+              <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-500/0 via-purple-500/20 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <p className="font-semibold text-primary/90 sm:text-right sm:pr-2 text-left">{key}:</p>
               <p className="text-muted-foreground text-sm leading-relaxed">{value.join(", ")}</p>
             </li>
