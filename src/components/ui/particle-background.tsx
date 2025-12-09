@@ -180,7 +180,8 @@ export function ParticleBackground() {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 z-0 pointer-events-none"
+      className="fixed inset-0 z-0 pointer-events-none touch-none"
+      style={{ touchAction: 'none' }}
       aria-hidden
     />
   );

@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { X, Send, MessageCircle } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
+import useMobileDetection from '@/hooks/use-mobile';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -20,10 +21,17 @@ export function ChatBot() {
   const [inputMessage, setInputMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [windowHeight, setWindowHeight] = useState('100dvh');
+  const [isMounted, setIsMounted] = useState(false);
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  
+  const isMobile = useMobileDetection();
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -147,12 +155,26 @@ export function ChatBot() {
   };
 
   // Responsive dimensions
-  const isMobile = typeof window !== 'undefined' ? window.innerWidth < 640 : false;
   const headerHeight = isMobile ? 62 : 52;
   const inputHeight = isMobile ? 88 : 72;
   const messagesHeight = isMobile 
     ? `calc(${windowHeight} - ${headerHeight + inputHeight}px)`
     : `calc(100% - ${headerHeight + inputHeight}px)`;
+
+  // Prevent hydration mismatch by not rendering until mounted
+  if (!isMounted) {
+    return (
+      <button
+        className="fixed bottom-6 right-6 z-50 bg-primary text-primary-foreground rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center w-12 h-12"
+        aria-label="Open chat"
+      >
+        <MessageCircle className="w-5 h-5" />
+        <span className="absolute bg-green-500 rounded-full border-background -top-0.5 -right-0.5 flex h-3 w-3 border-2">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+        </span>
+      </button>
+    );
+  }
 
   return (
     <>
