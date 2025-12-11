@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: "Projects | Tanzir Hossain",
     description:
       "Explore my portfolio of AI/ML, software development, and robotics projects. From RAG systems and agentic AI to computer vision applications and robotic solutions.",
-    url: "https://tanzir-hossain.vercel.app/projects",
+    url: "https://tanzir.dev/projects",
     type: "website",
   },
   keywords: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     "Microservices",
   ],
   alternates: {
-    canonical: "https://tanzir-hossain.vercel.app/projects",
+    canonical: "https://tanzir.dev/projects",
   },
 };
 
