@@ -187,13 +187,22 @@ export function ChatBot() {
           isMobile ? 'w-14 h-14' : 'w-12 h-12'
         }`}
         aria-label="Open chat"
+        style={{ width: isMobile ? '3.5rem' : '3rem', height: isMobile ? '3.5rem' : '3rem' }}
       >
         <MessageCircle className={isMobile ? "w-7 h-7" : "w-5 h-5"} />
         <span className={`absolute bg-green-500 rounded-full border-background ${
           isMobile 
-            ? '-top-1 -right-1 flex h-4 w-4 border-4' 
+            ? '-top-1 -right-1 flex h-4 w-4 border-2' 
             : '-top-0.5 -right-0.5 flex h-3 w-3 border-2'
-        }`}>
+        }`}
+        style={{ 
+          width: isMobile ? '1rem' : '0.75rem', 
+          height: isMobile ? '1rem' : '0.75rem',
+          borderWidth: '2px',
+          top: isMobile ? '-0.25rem' : '-0.125rem',
+          right: isMobile ? '-0.25rem' : '-0.125rem'
+        }}
+        >
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
         </span>
       </button>
