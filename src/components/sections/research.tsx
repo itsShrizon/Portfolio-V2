@@ -13,7 +13,7 @@ interface IResearchData {
 }
 
 export function Research({ data }: { data: Record<string, IResearchData> }) {
-  const [isCollapsed, setIsCollapsed] = useState(true);
+  const [isCollapsed, setIsCollapsed] = useState(false);
 
   const getStatusColor = (status: string) => {
     switch (status.toLowerCase()) {

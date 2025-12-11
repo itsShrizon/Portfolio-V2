@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 
-const baseUrl = "https://tanzir-hossain.vercel.app";
+// TODO: Update this to your custom domain
+const baseUrl = "https://tanzir.dev";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticRoute: MetadataRoute.Sitemap = [

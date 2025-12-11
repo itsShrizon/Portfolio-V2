@@ -46,6 +46,8 @@ export default function Page() {
     <div className="mx-auto px-4 pt-6 sm:pt-12 w-full lg:w-2/3 text-foreground min-h-screen">
       <Navbar />
 
+      <h1 className="sr-only">Projects by Tanzir Hossain - AI Engineer</h1>
+
       <GridPattern
         width={30}
         height={30}
@@ -103,7 +105,7 @@ export default function Page() {
                     <div className="relative rounded-lg overflow-hidden group">
                       <BlurImage
                         src={value.IMAGE || "/placeholder.svg"}
-                        alt={value.TITLE}
+                        alt={`${value.TITLE} - ${value.DESCRIPTION}`}
                         width={600}
                         height={400}
                         className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"

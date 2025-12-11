@@ -2,10 +2,6 @@ import { OpenAI } from 'openai';
 import { NextResponse } from 'next/server';
 import { DATA } from '@/app/data';
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
-
 function generateSystemPrompt() {
   // Format Experience
   const experienceText = Object.entries(DATA.EXPERIENCE)
@@ -79,6 +75,7 @@ Here's everything you know about Tanzir:
 - Age: ${DATA.HEADER.AGE}
 - Pronouns: ${DATA.HEADER.PRONOUN}
 - Email: ${DATA.HEADER.EMAIL}
+- Work Email: ${DATA.HEADER.EMAIL_JVAI}
 - GitHub: ${DATA.HEADER.GITHUB}
 - LinkedIn: ${DATA.HEADER.LINKEDIN}
 
@@ -126,6 +123,10 @@ export async function POST(req: Request) {
         { status: 500 }
       );
     }
+
+    const openai = new OpenAI({
+      apiKey: process.env.OPENAI_API_KEY,
+    });
 
     const stream = await openai.chat.completions.create({
       model: 'gpt-4.1-nano',

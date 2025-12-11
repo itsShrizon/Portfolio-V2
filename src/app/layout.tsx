@@ -14,51 +14,13 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://tanzir-hossain.vercel.app"),
+  metadataBase: new URL("https://tanzir.dev"),
   title: {
     default: "Tanzir Hossain | AI Engineer",
     template: "%s | Tanzir Hossain",
   },
   description:
     "AI Engineer specializing in machine learning, natural language processing, and automation. Building smart, efficient solutions with LLMs, RAG pipelines, and AI workflows.",
-  openGraph: {
-    title: "Tanzir Hossain | AI Engineer",
-    description:
-      "AI Engineer specializing in machine learning, natural language processing, and automation. Building smart, efficient solutions with LLMs, RAG pipelines, and AI workflows.",
-    url: "https://tanzir-hossain.vercel.app/",
-    siteName: "Tanzir Hossain",
-    locale: "en_US",
-    type: "website",
-    images: [
-      {
-        url: "https://tanzir-hossain.vercel.app/opengraph-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Tanzir Hossain | AI Engineer",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Tanzir Hossain | AI Engineer",
-    description:
-      "AI Engineer specializing in machine learning, natural language processing, and automation. Building smart, efficient solutions with LLMs, RAG pipelines, and AI workflows.",
-    images: ["https://tanzir-hossain.vercel.app/opengraph-image.png"],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  authors: [
-    { name: "Tanzir Hossain", url: "https://tanzir-hossain.vercel.app/" },
-  ],
   keywords: [
     "Tanzir",
     "Hossain",
@@ -82,11 +44,51 @@ export const metadata: Metadata = {
     "FastAPI",
     "Hugging Face",
     "Vector Databases",
+    "Portfolio",
+    "Next.js",
+    "React",
+    "Automation",
   ],
+  authors: [{ name: "Tanzir Hossain", url: "https://tanzir.dev" }],
   creator: "Tanzir Hossain",
   publisher: "Tanzir Hossain",
   alternates: {
-    canonical: "https://tanzir-hossain.vercel.app",
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Tanzir Hossain | AI Engineer",
+    description:
+      "AI Engineer specializing in machine learning, natural language processing, and automation. Building smart, efficient solutions with LLMs, RAG pipelines, and AI workflows.",
+    url: "https://tanzir.dev/",
+    siteName: "Tanzir Hossain",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Tanzir Hossain | AI Engineer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tanzir Hossain | AI Engineer",
+    description:
+      "AI Engineer specializing in machine learning, natural language processing, and automation. Building smart, efficient solutions with LLMs, RAG pipelines, and AI workflows.",
+    images: ["/opengraph-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true, 
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -99,8 +101,8 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Tanzir Hossain",
-    url: "https://tanzir-hossain.vercel.app",
-    image: "https://tanzir-hossain.vercel.app/opengraph-image.png",
+    url: "https://tanzir.dev",
+    image: "https://tanzir.dev/opengraph-image.png",
     jobTitle: "AI Engineer",
     worksFor: {
       "@type": "Organization",
@@ -108,7 +110,7 @@ export default function RootLayout({
     },
     sameAs: [
       "https://github.com/itsShrizon",
-      "https://tanzir-hossain.vercel.app/",
+      "https://tanzir.dev/",
     ],
     knowsAbout: [
       "Artificial Intelligence",
@@ -146,7 +148,7 @@ export default function RootLayout({
               '@context': 'https://schema.org',
               '@type': 'WebSite',
               name: 'Tanzir Hossain | AI Engineer',
-              url: 'https://tanzir-hossain.vercel.app',
+              url: 'https://tanzir.dev',
               potentialAction: {
                 '@type': 'SearchAction',
                 target: 'https://www.google.com/search?q={search_term_string}',

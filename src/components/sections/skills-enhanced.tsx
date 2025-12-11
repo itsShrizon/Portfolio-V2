@@ -6,7 +6,7 @@ import { useSpring, animated } from "@react-spring/web";
 import { FadeInSection } from "../ui/fade-in-section";
 
 export function Skills({ data }: { data: Record<string, string[]> }) {
-  const [isCollapsed, setIsCollapsed] = useState(true);
+  const [isCollapsed, setIsCollapsed] = useState(false);
   const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
 
   return (

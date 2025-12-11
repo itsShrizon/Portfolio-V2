@@ -52,6 +52,7 @@ export const DATA = {
       "An AI Engineer who builds smart, efficient solutions to complex problems, specializing in machine learning, natural language processing, and automation.",
     RESUME: "/Resume.pdf",
     EMAIL: "mailto:mailme.tanzir@gmail.com",
+    EMAIL_JVAI: "mailto:tanzir@joinventureai.com",
     GITHUB: "https://github.com/itsShrizon",
     LINKEDIN: "https://www.linkedin.com/in/tanzir-hossain-shrizon/",
     PHONE: "(+880) 1404744781",

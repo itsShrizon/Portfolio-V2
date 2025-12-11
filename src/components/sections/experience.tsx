@@ -24,7 +24,7 @@ export function Experience({
 }: {
   data: Record<string, IExperienceData>;
 }) {
-  const [isCollapsed, setIsCollapsed] = useState(true);
+  const [isCollapsed, setIsCollapsed] = useState(false);
 
   return (
     <FadeInSection direction="up">

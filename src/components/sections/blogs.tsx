@@ -24,7 +24,7 @@ export function Blogs({ data }: { data: Record<string, IBlogData> }) {
     {}
   );
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isCollapsed, setIsCollapsed] = useState(true);
+  const [isCollapsed, setIsCollapsed] = useState(false);
 
   const toggleExpand = (key: string) => {
     setExpandedItems((prev) => ({

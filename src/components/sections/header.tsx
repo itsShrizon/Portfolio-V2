@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Briefcase } from "lucide-react";
 import { MovingElement } from "../navbar";
 import { Typewriter } from "../ui/typewriter";
 import { AnimatedAge } from "../ui/animated-age";
-import { TextScramble } from "../ui/text-scramble";
+import ScrambledText from "@/components/ui/shadcn-io/scrambled-text";
 import { CalendlyModal } from "../ui/calendly-modal";
 import { useSpring, animated } from "@react-spring/web";
 
@@ -16,6 +16,7 @@ interface HeaderData {
   HEADLINE: string;
   RESUME: string;
   EMAIL: string;
+  EMAIL_JVAI?: string;
   GITHUB: string;
   LINKEDIN: string;
   PHONE: string;
@@ -53,11 +54,19 @@ export function Header({ data }: { data: HeaderData }) {
 
         <div>
           <animated.h1 style={nameAnimation} className="font-bold text-primary text-4xl tracking-tight">
-            <TextScramble 
-              text={data.NAME}
-              speed={50}
-              scrambleSpeed={30}
-            />
+            <ScrambledText
+              className="text-left"
+              radius={120}
+              duration={1}
+              speed={0.6}
+              scrambleChars="!@#$%^&*()_+"
+              style={{ 
+                color: 'currentColor',
+                fontFamily: 'inherit'
+              }}
+            >
+              {data.NAME}
+            </ScrambledText>
           </animated.h1>
           <h2 className="flex flex-col gap-0 font-normal text-primary/90 text-base mt-2">
             <p>
@@ -94,6 +103,15 @@ export function Header({ data }: { data: HeaderData }) {
             >
               <Mail />
             </MovingElement>
+            {data.EMAIL_JVAI && (
+              <MovingElement
+                change={() => handleChange(data.EMAIL_JVAI!)}
+                ariaLabel="Work Email"
+                className="text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
+              >
+                <Briefcase />
+              </MovingElement>
+            )}
             <MovingElement
               change={() => handleChange(data.GITHUB)}
               ariaLabel="Github"

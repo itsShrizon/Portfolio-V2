@@ -23,7 +23,7 @@ interface IProjectData {
 }
 
 export function Projects({ data }: { data: IProjectData[] }) {
-  const [isCollapsed, setIsCollapsed] = useState(true);
+  const [isCollapsed, setIsCollapsed] = useState(false);
   const [showAll, setShowAll] = useState(false);
 
   return (

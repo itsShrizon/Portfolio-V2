@@ -15,7 +15,7 @@ interface IEducationData {
 }
 
 export function Education({ data }: { data: Record<string, IEducationData> }) {
-  const [isCollapsed, setIsCollapsed] = useState(true);
+  const [isCollapsed, setIsCollapsed] = useState(false);
 
   return (
     <FadeInSection direction="up">

@@ -6,7 +6,7 @@ import { MovingElement } from "../navbar";
 import { FadeInSection } from "../ui/fade-in-section";
 
 export function Skills({ data }: { data: Record<string, string[]> }) {
-  const [isCollapsed, setIsCollapsed] = useState(true);
+  const [isCollapsed, setIsCollapsed] = useState(false);
 
   return (
     <FadeInSection direction="up">
