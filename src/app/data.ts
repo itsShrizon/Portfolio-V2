@@ -49,7 +49,7 @@ export const DATA = {
     AGE: dynamicAge,
     PRONOUN: "he/him",
     HEADLINE:
-      "An AI Engineer who builds smart, efficient solutions to complex problems, specializing in machine learning, natural language processing, and automation.",
+      "AI Engineer specializing in machine learning, NLP, and intelligent automation.",
     RESUME: "/Resume.pdf",
     EMAIL: "mailto:mailme.tanzir@gmail.com",
     EMAIL_JVAI: "mailto:tanzir@joinventureai.com",
@@ -62,7 +62,7 @@ export const DATA = {
 
   ABOUT_ME: {
     INTRO:
-      "I'm an AI Engineer who builds smart, efficient solutions to complex problems. I specialize in machine learning, natural language processing, and automation—developing predictive tools, streamlining data systems, and connecting platforms like vector databases, LangGraph, and n8n. Whether you need to integrate custom automation into your database or fine-tune an open-source model for a specific task, I can help make it happen.",
+      "I’m an AI Engineer specializing in machine learning, NLP, and automation, with experience building predictive models, optimizing data pipelines, and deploying scalable AI systems. I work with GCP, CI/CD pipelines, Docker, Cloud Run, and Vertex AI to deliver production-ready ML deployments. I also integrate intelligent workflows using vector databases, LangGraph, and n8n to streamline automation and data-driven operations. Whether it's custom workflow automation or fine-tuning open-source models, I deliver efficient, high-performance AI solutions.",
     EXPERTISE:
       "My expertise lies in LLM fine-tuning, RAG pipelines, ML/DL model development, and AI workflow automation with n8n, bridging research with real-world deployment.",
   },

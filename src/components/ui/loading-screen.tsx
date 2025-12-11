@@ -6,18 +6,23 @@ export function LoadingScreen() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Check if page has loaded
-    if (document.readyState === "complete") {
-      setIsLoading(false);
-    } else {
-      const handleLoad = () => {
-        setTimeout(() => setIsLoading(false), 500);
-      };
+    const minLoadTime = 400;
+    const startTime = Date.now();
+
+    const handleLoad = () => {
+      const elapsedTime = Date.now() - startTime;
+      const remainingTime = Math.max(0, minLoadTime - elapsedTime);
       
+      setTimeout(() => setIsLoading(false), remainingTime);
+    };
+
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
       window.addEventListener("load", handleLoad);
       
       // Fallback timeout
-      const timeout = setTimeout(() => setIsLoading(false), 3000);
+      const timeout = setTimeout(handleLoad, 5000);
       
       return () => {
         window.removeEventListener("load", handleLoad);
@@ -29,7 +34,7 @@ export function LoadingScreen() {
   if (!isLoading) return null;
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-background transition-opacity duration-500">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-background transition-opacity duration-1000">
       {/* Animated background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
