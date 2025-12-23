@@ -346,7 +346,7 @@ export const DATA = {
       CATEGORY: "Agents & Automation",
       IMAGE: BusETicketImage,
       GITHUB: "",
-      DEMO: "https://agent-whisper.softr.app/",
+      DEMO: "https://agentwhisper.tanzir.dev/login",
       FEATURED: true
     },
     {
