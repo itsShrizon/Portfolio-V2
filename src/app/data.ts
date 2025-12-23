@@ -109,25 +109,187 @@ export const DATA = {
   },
 
   PROJECTS: [
-    
     {
-      ID: "bangla-rag",
-      TITLE: "BanglaRAG - Retrieval-Augmented Generation",
-      DESCRIPTION: "RAG pipeline combining FAISS vector search with Bangla document embeddings for accurate information retrieval.",
-      LONG_DESCRIPTION: "Developed a RAG pipeline combining FAISS vector search with Bangla document embeddings. Implemented grounded answer generation for Bangla queries using retrieval-augmented LLMs, enhancing information retrieval accuracy for low-resource Bangla language processing.",
+      ID: "multi-level-chatbot",
+      TITLE: "Multi-Level Decision-Making Chatbot",
+      DESCRIPTION: "A chatbot framework utilizing multi-level decision-making strategies for enhanced, context-aware interactions.",
+      LONG_DESCRIPTION: "A chatbot framework utilizing multi-level decision-making strategies for enhanced, context-aware interactions. Ideal for developing intelligent conversational agents that require hierarchical reasoning.",
       FEATURES: [
-        "FAISS-based vector search implementation",
-        "Bangla document embedding generation",
-        "Grounded answer generation for Bangla queries",
-        "Enhanced accuracy for low-resource language",
-        "Retrieval-augmented LLM integration"
+        "Multi-level decision making",
+        "Context-aware interactions",
+        "Hierarchical reasoning",
+        "Intelligent conversational agents"
       ],
-      TECHNOLOGIES: ["Python", "FAISS", "RAG", "LLMs", "SentenceTransformers", "Bangla NLP"],
-      CATEGORY: "AI/ML/DL",
+      TECHNOLOGIES: ["Python"],
+      CATEGORY: "Agents & Automation",
       IMAGE: DubAIImage,
-      GITHUB: "",
+      GITHUB: "https://github.com/itsShrizon/Multi-Level-Decision-Making-Chatbot",
+      DEMO: "",
+      FEATURED: false
+    },
+    {
+      ID: "resume-screening",
+      TITLE: "Resume Screening Workflow",
+      DESCRIPTION: "Automated resume-screening workflow that fetches resumes, analyzes them with AI, and logs scores.",
+      LONG_DESCRIPTION: "Automated resume-screening workflow that fetches resumes from Google Drive, analyzes them with Gemini and ChatGPT, validates structured JSON, and logs candidate scores into Google Sheets using a strict AI Engineer HR rubric with batching, retries, and full end-to-end automation.",
+      FEATURES: [
+        "Automated resume fetching",
+        "AI analysis with Gemini & ChatGPT",
+        "Structured JSON validation",
+        "Google Sheets logging",
+        "End-to-end automation"
+      ],
+      TECHNOLOGIES: ["Python", "Gemini", "ChatGPT", "Google Drive API", "Google Sheets API"],
+      CATEGORY: "Agents & Automation",
+      IMAGE: WeatherAppImage,
+      GITHUB: "https://github.com/itsShrizon/Resume-Screening-Workflow",
       DEMO: "",
       FEATURED: true
+    },
+    {
+      ID: "arxiv-assistant",
+      TITLE: "Arxiv Research Assistant",
+      DESCRIPTION: "An assistant tool for searching and analyzing research papers from arXiv.",
+      LONG_DESCRIPTION: "An assistant tool for searching and analyzing research papers from arXiv. Designed to streamline the process of gathering relevant academic resources and extracting key insights in an automated fashion.",
+      FEATURES: [
+        "ArXiv paper search",
+        "Automated analysis",
+        "Key insight extraction",
+        "Academic resource gathering"
+      ],
+      TECHNOLOGIES: ["Python"],
+      CATEGORY: "AI & NLP",
+      IMAGE: PickAndPlaceImage,
+      GITHUB: "https://github.com/itsShrizon/Arxiv-research-assistant",
+      DEMO: "https://github.com/itsShrizon/Arxiv-Research-Assistant",
+      FEATURED: false
+    },
+    {
+      ID: "etarian-food-recipe",
+      TITLE: "Etarian Food Recipe",
+      DESCRIPTION: "A Python-based application focused on generating, managing, or recommending vegetarian recipes.",
+      LONG_DESCRIPTION: "A Python-based application focused on generating, managing, or recommending vegetarian recipes. Useful for users who wish to maintain a healthy and plant-based diet with ease.",
+      FEATURES: [
+        "Vegetarian recipe generation",
+        "Recipe management",
+        "Dietary recommendations",
+        "Healthy eating support"
+      ],
+      TECHNOLOGIES: ["Python"],
+      CATEGORY: "Software & Web",
+      IMAGE: PickAndPlaceImage,
+      GITHUB: "https://github.com/itsShrizon/Etarian-Food-recipe",
+      DEMO: "",
+      FEATURED: false
+    },
+    {
+      ID: "food-app-stuff",
+      TITLE: "AI Based Food App",
+      DESCRIPTION: "AI Based foodapp using pydantic, langchain and openai.",
+      LONG_DESCRIPTION: "AI Based foodapp using pydantic, langchain and openai. Designed to provide intelligent food-related services.",
+      FEATURES: [
+        "AI-based food services",
+        "Pydantic integration",
+        "LangChain workflows",
+        "OpenAI integration"
+      ],
+      TECHNOLOGIES: ["Python", "Pydantic", "LangChain", "OpenAI"],
+      CATEGORY: "Software & Web",
+      IMAGE: ShapeDrawerImage,
+      GITHUB: "https://github.com/itsShrizon/Food-App-stuff",
+      DEMO: "",
+      FEATURED: false
+    },
+    {
+      ID: "portfolio-website",
+      TITLE: "Portfolio Website",
+      DESCRIPTION: "A personal portfolio website built using HTML, CSS, and JavaScript.",
+      LONG_DESCRIPTION: "A personal portfolio website built using HTML, CSS, and JavaScript. Showcases projects, skills, and contact information for prospective collaborators or employers.",
+      FEATURES: [
+        "Personal portfolio showcase",
+        "Project display",
+        "Skills listing",
+        "Contact information"
+      ],
+      TECHNOLOGIES: ["HTML", "CSS", "JavaScript"],
+      CATEGORY: "Software & Web",
+      IMAGE: BusETicketImage,
+      GITHUB: "https://github.com/itsShrizon/portfolio-website",
+      DEMO: "",
+      FEATURED: false
+    },
+    {
+      ID: "bangla-rag",
+      TITLE: "BanglaRAG",
+      DESCRIPTION: "A Python project dedicated to building retrieval-augmented generation (RAG) systems specifically for the Bangla language.",
+      LONG_DESCRIPTION: "A Python project dedicated to building retrieval-augmented generation (RAG) systems specifically for the Bangla language. Aims to enhance NLP applications for Bangla-speaking users.",
+      FEATURES: [
+        "RAG system for Bangla",
+        "Enhanced NLP applications",
+        "Bangla language support"
+      ],
+      TECHNOLOGIES: ["Python", "RAG", "NLP"],
+      CATEGORY: "AI & NLP",
+      IMAGE: DubAIImage,
+      GITHUB: "https://github.com/itsShrizon/BanglaRAG",
+      DEMO: "",
+      FEATURED: true
+    },
+    {
+      ID: "multi-level-agent",
+      TITLE: "Multi-Level Decision-Making Agent",
+      DESCRIPTION: "Hierarchical AI framework combining symbolic reasoning and reinforcement learning.",
+      LONG_DESCRIPTION: "Multi-Level Decision-Making Agent is a hierarchical AI framework combining symbolic reasoning, hierarchical reinforcement learning, and goal decomposition. Designed for scalable, interpretable multi-agent and robotic systems, it enables real-time decision hierarchies, policy refinement, modular tooling, examples, tests, and extensible demos. v1.0.0",
+      FEATURES: [
+        "Hierarchical AI framework",
+        "Symbolic reasoning",
+        "Reinforcement learning",
+        "Goal decomposition",
+        "Scalable multi-agent systems"
+      ],
+      TECHNOLOGIES: ["Python", "PowerShell", "Shell", "Docker"],
+      CATEGORY: "Agents & Automation",
+      IMAGE: CancerDetectionImage,
+      GITHUB: "https://github.com/itsShrizon/Multi-Level-Decision-Making-Agent",
+      DEMO: "",
+      FEATURED: true
+    },
+    {
+      ID: "bangla-news-classification",
+      TITLE: "Bangla News Classification",
+      DESCRIPTION: "ML/DL approach for Bangla news classification achieving 94% accuracy.",
+      LONG_DESCRIPTION: "BanglaNewsClassifier: ML/DL approach for Bangla news classification. 118,404 articles, 8 categories. Features: web scraping, Bangla-specific preprocessing, hybrid models. Best model (LSTM+SVM stacking) achieves 94% accuracy. Contributes to NLP for low-resource languages.",
+      FEATURES: [
+        "Bangla news classification",
+        "Web scraping",
+        "Bangla-specific preprocessing",
+        "Hybrid models (LSTM+SVM)",
+        "High accuracy (94%)"
+      ],
+      TECHNOLOGIES: ["Jupyter Notebook", "Python", "LSTM", "SVM", "NLP"],
+      CATEGORY: "AI & NLP",
+      IMAGE: SignboardDetectionImage,
+      GITHUB: "https://github.com/itsShrizon/Bangla-News-Classification",
+      DEMO: "",
+      FEATURED: true
+    },
+    {
+      ID: "game-recommendation",
+      TITLE: "Game Recommendation Engine",
+      DESCRIPTION: "Recommender system for suggesting games to users based on their preferences and behaviors.",
+      LONG_DESCRIPTION: "Recommender system for suggesting games to users based on their preferences and behaviors. Uses machine learning or data-driven techniques for personalized recommendations.",
+      FEATURES: [
+        "Game suggestions",
+        "User preference analysis",
+        "Behavior-based recommendations",
+        "Machine learning techniques"
+      ],
+      TECHNOLOGIES: ["Jupyter Notebook", "Python", "Machine Learning"],
+      CATEGORY: "AI & NLP",
+      IMAGE: SignboardDetectionImage,
+      GITHUB: "https://github.com/itsShrizon/Game-Recommendation-Engine",
+      DEMO: "https://github.com/itsShrizon/Game-Recommendation-Engine",
+      FEATURED: false
     },
     {
       ID: "medical-qa-llm",
@@ -142,7 +304,7 @@ export const DATA = {
         "Medical domain-specific fine-tuning"
       ],
       TECHNOLOGIES: ["Python", "LLMs", "Medical NLP", "RAG", "Safety AI"],
-      CATEGORY: "AI/ML/DL",
+      CATEGORY: "AI & NLP",
       IMAGE: CancerDetectionImage,
       GITHUB: "",
       DEMO: "",
@@ -161,7 +323,7 @@ export const DATA = {
         "Performance optimization"
       ],
       TECHNOLOGIES: ["Python", "Transformers", "BERT", "PyTorch", "Hugging Face"],
-      CATEGORY: "AI/ML/DL",
+      CATEGORY: "AI & NLP",
       IMAGE: ShapeDrawerImage,
       GITHUB: "",
       DEMO: "",
@@ -181,7 +343,7 @@ export const DATA = {
         "Hosted on Google Cloud Platform"
       ],
       TECHNOLOGIES: ["n8n", "Softr", "Airtable", "FFmpeg", "GCP", "Automation"],
-      CATEGORY: "AI/ML/DL",
+      CATEGORY: "Agents & Automation",
       IMAGE: BusETicketImage,
       GITHUB: "",
       DEMO: "https://agent-whisper.softr.app/",
@@ -201,50 +363,11 @@ export const DATA = {
         "Personalized job matching algorithm"
       ],
       TECHNOLOGIES: ["Python", "PostgreSQL", "SQLAlchemy", "Vector Databases", "Text Embeddings", "ML"],
-      CATEGORY: "AI/ML/DL",
+      CATEGORY: "Agents & Automation",
       IMAGE: WeatherAppImage,
       GITHUB: "",
       DEMO: "https://aiapply.co/",
       FEATURED: true
-    },
-    {
-      ID: "game-recommendation",
-      TITLE: "Game Recommendation Engine",
-      DESCRIPTION: "BERT-based game recommendation system using semantic embeddings and LDA topic modeling for personalized suggestions.",
-      LONG_DESCRIPTION: "Leveraged BERT embeddings to convert game descriptions into rich semantic vectors. Applied Latent Dirichlet Allocation (LDA) on user reviews to uncover thematic topics. Combined embedding and topic vectors, then computed cosine similarity for recommendation scoring.",
-      FEATURES: [
-        "BERT embeddings for game descriptions",
-        "LDA topic modeling on user reviews",
-        "Semantic vector generation",
-        "Cosine similarity-based scoring",
-        "Personalized game recommendations"
-      ],
-      TECHNOLOGIES: ["Python", "BERT", "LDA", "Scikit-learn", "NLP", "Recommendation Systems"],
-      CATEGORY: "AI/ML/DL",
-      IMAGE: SignboardDetectionImage,
-      GITHUB: "",
-      DEMO: "https://github.com/itsShrizon/Game-Recommendation-Engine",
-      FEATURED: false
-    },
-    {
-      ID: "arxiv-assistant",
-      TITLE: "Arxiv Research Assistant",
-      DESCRIPTION: "LLM-powered paper search and analysis tool with vector similarity for intelligent academic research.",
-      LONG_DESCRIPTION: "Developed APIs for paper retrieval, query relevance scoring, and LLM-driven insights. Applied vector similarity for intelligent search ranking and topic tracking. Implemented document processing automation for academic paper analysis.",
-      FEATURES: [
-        "Paper retrieval and search APIs",
-        "Query relevance scoring",
-        "LLM-driven research insights",
-        "Vector similarity-based ranking",
-        "Document processing automation",
-        "Topic tracking and analysis"
-      ],
-      TECHNOLOGIES: ["Python", "LLMs", "Vector Databases", "APIs", "Document Processing"],
-      CATEGORY: "AI/ML/DL",
-      IMAGE: PickAndPlaceImage,
-      GITHUB: "",
-      DEMO: "https://github.com/itsShrizon/Arxiv-Research-Assistant",
-      FEATURED: false
     }
   ],
 

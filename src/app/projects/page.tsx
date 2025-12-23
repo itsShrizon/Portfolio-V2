@@ -24,7 +24,11 @@ interface IProjectData {
   FEATURED: boolean;
 }
 
-type CategoryFilter = "All Projects" | "Robotics" | "Software Development" | "AI/ML/DL";
+type CategoryFilter =
+  | "All Projects"
+  | "AI & NLP"
+  | "Agents & Automation"
+  | "Software & Web";
 
 export default function Page() {
   const projectsData: IProjectData[] = DATA.PROJECTS;
@@ -33,9 +37,9 @@ export default function Page() {
 
   const categories: CategoryFilter[] = [
     "All Projects",
-    "AI/ML/DL",
-    "Software Development",
-    "Robotics",
+    "AI & NLP",
+    "Agents & Automation",
+    "Software & Web",
   ];
 
   const filteredProjects = selectedCategory === "All Projects"

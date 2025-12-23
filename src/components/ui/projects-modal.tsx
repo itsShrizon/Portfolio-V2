@@ -19,7 +19,12 @@ interface IProjectData {
   FEATURED: boolean;
 }
 
-const CATEGORIES = ["All Projects", "AI/ML/DL", "Software Development", "Robotics"] as const;
+const CATEGORIES = [
+  "All Projects",
+  "AI & NLP",
+  "Agents & Automation",
+  "Software & Web",
+] as const;
 type Category = typeof CATEGORIES[number];
 
 function matchesCategory(project: IProjectData, category: Category) {
